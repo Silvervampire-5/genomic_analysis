@@ -17,7 +17,7 @@ bwa index bbc.fasta
 for i in *.lite.1_1.fastq
 do
 OUT=${i%.lite.1_1.fastq}
-bwa mem -t 10 bbc.fasta $OUT.fastq > $OUT.sam
+bwa mem -t 10 bbc.fasta $OUT.lite.1_1.fastq $OUT.lite.1_2.fastq > $OUT.sam
 done
 ```
 
